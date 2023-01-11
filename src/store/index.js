@@ -1,0 +1,158 @@
+import { createStore } from "vuex";
+// import { transactions } from "../utils/db.json";
+
+export const store = createStore({
+  state: {
+    transactions: [
+      {
+        id: "1",
+        date: "26.10.2019",
+        amount: "100",
+        type: "success",
+      },
+      {
+        id: "2",
+        date: "26.10.2019",
+        amount: "200",
+        type: "error",
+      },
+      {
+        id: "3",
+        date: "26.10.2019",
+        amount: "200",
+        type: "error",
+      },
+      {
+        id: "4",
+        date: "26.10.2019",
+        amount: "200",
+        type: "error",
+      },
+      {
+        id: "5",
+        date: "26.10.2019",
+        amount: "200",
+        type: "error",
+      },
+      {
+        id: "6",
+        date: "26.10.2019",
+        amount: "300",
+        type: "processing",
+      },
+      {
+        id: "7",
+        date: "26.10.2019",
+        amount: "200",
+        type: "success",
+      },
+      {
+        id: "8",
+        date: "26.10.2019",
+        amount: "200",
+        type: "success",
+      },
+      {
+        id: "9",
+        date: "26.10.2019",
+        amount: "200",
+        type: "error",
+      },
+      {
+        id: "10",
+        date: "26.10.2019",
+        amount: "300",
+        type: "processing",
+      },
+      {
+        id: "11",
+        date: "26.10.2019",
+        amount: "100",
+        type: "success",
+      },
+      {
+        id: "12",
+        date: "26.10.2019",
+        amount: "200",
+        type: "error",
+      },
+      {
+        id: "13",
+        date: "26.10.2019",
+        amount: "200",
+        type: "error",
+      },
+      {
+        id: "14",
+        date: "26.10.2019",
+        amount: "200",
+        type: "error",
+      },
+      {
+        id: "15",
+        date: "26.10.2019",
+        amount: "200",
+        type: "error",
+      },
+      {
+        id: "16",
+        date: "26.10.2019",
+        amount: "300",
+        type: "processing",
+      },
+      {
+        id: "17",
+        date: "26.10.2019",
+        amount: "200",
+        type: "error",
+      },
+      {
+        id: "18",
+        date: "26.10.2019",
+        amount: "200",
+        type: "success",
+      },
+      {
+        id: "19",
+        date: "26.10.2019",
+        amount: "200",
+        type: "processing",
+      },
+      {
+        id: "20",
+        date: "26.10.2019",
+        amount: "300",
+        type: "processing",
+      },
+      {
+        id: "21",
+        date: "26.10.2019",
+        amount: "300",
+        type: "processing",
+      },
+      {
+        id: "22",
+        date: "26.10.2019",
+        amount: "300",
+        type: "success",
+      },
+    ],
+  },
+  getters: {
+    transactions: (state) => state.transactions,
+  },
+  actions: {
+    async setTransactions(context, payload) {
+      context.commit("SET_TRANSACTIONS", payload);
+    },
+  },
+  mutations: {
+    SET_TRANSACTIONS(state, payload) {
+      state.transactions = payload;
+    },
+  },
+  modules: {},
+});
+
+// export the store
+export default store;
